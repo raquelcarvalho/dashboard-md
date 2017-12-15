@@ -1,0 +1,431 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Dashboard - Conube</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-light_blue.min.css">
+    
+    <link rel="stylesheet" href="getmdl-select.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row mdl-color--white">
+          <form action="#">
+            <div class="mdl-textfield mdl-js-textfield">
+              <input class="mdl-textfield__input" type="text" id="sample1">
+              <label class="mdl-textfield__label" for="sample1"><i class="material-icons vAlignMiddle">search</i> O que deseja fazer?</label>
+            </div>
+          </form>
+          <div class="mdl-layout-spacer"></div>
+          <div class="demo-drawer-login">
+            <div class="demo-avatar-dropdown">
+              <img src="images/img-avatar.png" class="demo-avatar">
+              <div class="mdl-layout-spacer"></div>
+              <span>Olá, Anderson!</span>
+              <div class="mdl-layout-spacer"></div>
+              <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">arrow_drop_down</i>
+                <span class="visuallyhidden">Accounts</span>
+              </button>
+              <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+                <li class="mdl-menu__item">hello@example.com</li>
+                <li class="mdl-menu__item">info@example.com</li>
+                <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+              </ul>
+            </div>
+          </div>
+          <button id="exitbtn" class="mdl-button mdl-button--icon">
+            <i class="material-icons">power_settings_new</i>
+          </button>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--white mdl-color-text--black">
+        
+        <div class="scroll-sidebar-left">
+        <header class="demo-drawer-header mdl-shadow--2dp">
+          <div class="demo-avatar-dropdown">
+            <img src="images/img-1porcento.png">
+            <span><strong>1Porcento LTDA</strong></span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn2" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn2">
+              <li class="mdl-menu__item">hello@example.com</li>
+              <li class="mdl-menu__item">info@example.com</li>
+              <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+            </ul>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--grey-100 mdl-shadow--2dp">
+          <p class="mdl-navigation__title">organize-se</p>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--red-700" aria-hidden="true" role="presentation">dashboard</i>Dashboard</a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--amber-800" aria-hidden="true" role="presentation">query_builder</i>A fazer</a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--light-green-500" aria-hidden="true" role="presentation">done_all</i>Concluídos</a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--pink-500" aria-hidden="true" role="presentation">notifications_active</i>Avisos</a>
+          <div class="mdl-layout-spacer"></div>
+          <p class="mdl-navigation__title">organize-se</p>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--light-green-500" aria-hidden="true" role="presentation">description</i>Emitir Nota Fiscal</a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--yellow-500" aria-hidden="true" role="presentation">attach_money</i>Pagar Imposto</a>
+          <a class="mdl-navigation__link" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--indigo-400" aria-hidden="true" role="presentation">account_balance</i>Extrato Bancário</a>
+          <div class="mdl-layout-spacer"></div>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-400" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-400" aria-hidden="true" role="presentation">add</i>Criar um atalho</a>
+          <div class="mdl-layout-spacer"></div>
+          <p class="mdl-navigation__title">Menu</p>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">description</i>Notas Fiscais <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">attach_money</i>Impostos <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">trending_up</i>Finanças <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">shopping_cart</i>Faturamento <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">account_balance</i>Bankline <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">domain</i>Minha empresa <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">people</i>Colaboradores <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">business_center</i>Pró-Labore e Dividendos <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">message</i>Solicitar serviços <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+          <a class="mdl-navigation__link mdc-list-item__start-detail mdl-color-text--grey-500" href=""><i class="material-icons mdc-list-item__start-detail mdl-color-text--grey-500" aria-hidden="true" role="presentation">school</i>Ajuda <i class="material-icons ico-arrow-menu">keyboard_arrow_right</i></a>
+        </nav>
+        </div>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <div class="mdl-grid demo-content">
+          <div class="mdl-cell mdl-cell--8-col col-left">
+            <div class="search-tasks">
+
+              <h6 class="mdl-typography--body-1 mdl-color-text--blue-grey-300">Organize-se</h6>
+              <h2 class="mdl-typography--headline"><strong>O que preciso fazer?</strong></h2>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                <input class="mdl-textfield__input" type="text" id="o_que" value="O que?" readonly tabIndex="-1">
+                <label for="o_que">
+                  <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                </label>
+                <!-- label for="o_que" class="mdl-textfield__label">Country</label -->
+                <ul for="o_que" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                  <li class="mdl-menu__item" data-val="DE">Germany</li>
+                  <li class="mdl-menu__item" data-val="BY">Belarus</li>
+                  <li class="mdl-menu__item" data-val="RU">Russia</li>
+                </ul>
+              </div>
+              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label getmdl-select getmdl-select__fix-height">
+                <input class="mdl-textfield__input" type="text" id="quando" value="Quando?" readonly tabIndex="-1">
+                <label for="quando">
+                  <i class="mdl-icon-toggle__label material-icons">keyboard_arrow_down</i>
+                </label>
+                <!-- label for="quando" class="mdl-textfield__label">Country</label -->
+                <ul for="quando" class="mdl-menu mdl-menu--bottom-left mdl-js-menu">
+                  <li class="mdl-menu__item" data-val="DE">Germany</li>
+                  <li class="mdl-menu__item" data-val="BY">Belarus</li>
+                  <li class="mdl-menu__item" data-val="RU">Russia</li>
+                </ul>
+              </div>
+              <form action="#" class="findTask">
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="findTask">
+                  <label class="mdl-textfield__label" for="findTask"><i class="material-icons vAlignMiddle">search</i> Encontre uma atividade</label>
+                </div>
+              </form>
+              <button id="add" class="mdl-button mdl-button--icon">
+                <i class="material-icons mdl-color-text--blue-600">add_box</i>
+              </button>
+
+            </div>
+            
+            <div class="tasks-expired">
+              <h6 class="mdl-typography--caption mdl-color-text--red">Em atraso</h6>
+              <div class="mdl-card one-row mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                   <div class="mdl-card__title">
+                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                        <span class="mdl-radio__label">Enviar proposta comercial para o cliente "Cooper Light"</span>
+                        
+                      </label>
+                      <div class="mdl-layout-spacer"></div>
+                      <span class="mdl-typography--caption mdl-color-text--red date">
+                          10 de nov
+                          <i class="material-icons vAlignMiddle">query_builder</i>
+                      </span>
+                    
+                   </div>
+              </div>
+              
+              <div class="mdl-card mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                <div class="mdl-card__title">
+                DAS Imposto<div class="mdl-layout-spacer"></div><span class="mdl-typography--caption mdl-color-text--red date">
+                        Vencido há 2 dias
+                        <i class="material-icons vAlignMiddle">query_builder</i>
+                    </span>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quisquam nam dignissimos voluptatibus. Possimus ipsa quo rem dolorem sit eligendi.</p>
+                  <h4 class="mdl-typography--font-bold mdl-typography--subhead">O que você deseja fazer?</h4>
+                </div>
+                <div class="mdl-card__actions">
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons mdl-color-text--yellow-500">refresh</i> Atualizar imposto
+                  </button>
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons mdl-color-text--light-green-500">done_all</i> Já paguei!
+                  </button>
+                </div>
+              </div>
+              
+              <div class="mdl-card one-row mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                   <div class="mdl-card__title">
+                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                        <span class="mdl-radio__label">Reunião com Anderson Feitosa</span>
+                        
+                      </label>
+                      <div class="mdl-layout-spacer"></div>
+                      <span class="mdl-typography--caption mdl-color-text--red date">
+                          Vencido ontem
+                          <i class="material-icons vAlignMiddle">query_builder</i>
+                      </span>
+                    
+                   </div>
+              </div>
+            </div>
+
+            <div class="tasks-today">
+              <h6 class="mdl-typography--caption">Hoje</h6>
+              <div class="mdl-card one-row mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                   <div class="mdl-card__title">
+                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                        <span class="mdl-radio__label">Pagar conta de energia</span>
+                        
+                      </label>
+                      <div class="mdl-layout-spacer"></div>
+                      <span class="mdl-typography--caption mdl-color-text--green-A700 date">
+                          Hoje
+                          <i class="material-icons vAlignMiddle">query_builder</i>
+                      </span>
+                    
+                   </div>
+              </div>
+              
+              <div class="mdl-card mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                <div class="mdl-card__title">
+                INSS Imposto<div class="mdl-layout-spacer"></div><span class="mdl-typography--caption mdl-color-text--green-A700 date">
+                        Hoje
+                        <i class="material-icons vAlignMiddle">query_builder</i>
+                    </span>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quisquam nam dignissimos voluptatibus. Possimus ipsa quo rem dolorem sit eligendi.</p>
+                  <h4 class="mdl-typography--font-bold mdl-typography--subhead">O que você deseja fazer?</h4>
+                </div>
+                <div class="mdl-card__actions">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--green-A700 mdl-color-text--white">
+                    <i class="material-icons">done_all</i> Pagar Agora
+                  </button>
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons mdl-color-text--light-green-500">done_all</i> Já paguei!
+                  </button>
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons ico-download"></i> Download do boleto
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="tasks-week">
+              <h6 class="mdl-typography--caption">Esta semana</h6>
+              
+              <div class="mdl-card mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                <div class="mdl-card__title">
+                Nota Fiscal<div class="mdl-layout-spacer"></div><span class="mdl-typography--caption mdl-color-text--orange date">
+                        terça-feira
+                        <i class="material-icons vAlignMiddle">query_builder</i>
+                    </span>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quisquam nam dignissimos voluptatibus. Possimus ipsa quo rem dolorem sit eligendi.</p>
+                  <h4 class="mdl-typography--font-bold mdl-typography--subhead">O que você deseja fazer?</h4>
+                </div>
+                <div class="mdl-card__actions">
+                  <button class="mdl-button mdl-js-button mdl-color-text--blue-grey-600">
+                    <i class="material-icons">delete</i> Cancelar agendamento
+                  </button>
+                </div>
+              </div>
+
+              <div class="mdl-card mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                <div class="mdl-card__title">
+                FGTS Imposto<div class="mdl-layout-spacer"></div><span class="mdl-typography--caption mdl-color-text--orange date">
+                        quinta-feira
+                        <i class="material-icons vAlignMiddle">query_builder</i>
+                    </span>
+                </div>
+                <div class="mdl-card__supporting-text">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate quisquam nam dignissimos voluptatibus. Possimus ipsa quo rem dolorem sit eligendi.</p>
+                  <h4 class="mdl-typography--font-bold mdl-typography--subhead">O que você deseja fazer?</h4>
+                </div>
+                <div class="mdl-card__actions">
+                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-color--green-A700 mdl-color-text--white">
+                    <i class="material-icons">done_all</i> Pagar Agora
+                  </button>
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons mdl-color-text--light-green-500">done_all</i> Já paguei!
+                  </button>
+                  <button class="mdl-button mdl-js-button">
+                    <i class="material-icons ico-download"></i> Download do boleto
+                  </button>
+                </div>
+              </div>
+              
+              <div class="mdl-card one-row mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                   <div class="mdl-card__title">
+                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                        <span class="mdl-radio__label">Pagar conta de água</span>
+                        
+                      </label>
+                      <div class="mdl-layout-spacer"></div>
+                      <span class="mdl-typography--caption mdl-color-text--orange date">
+                          sexta-feira
+                          <i class="material-icons vAlignMiddle">query_builder</i>
+                      </span>
+                    
+                   </div>
+              </div>
+
+              <div class="mdl-card one-row mdl-cell--12-col  mdl-shadow--2dp mdl-color--white">
+                   <div class="mdl-card__title">
+                     <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                        <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="1">
+                        <span class="mdl-radio__label">Pagar conta de internet</span>
+                        
+                      </label>
+                      <div class="mdl-layout-spacer"></div>
+                      <span class="mdl-typography--caption mdl-color-text--orange date">
+                          sexta-feira
+                          <i class="material-icons vAlignMiddle">query_builder</i>
+                      </span>
+                    
+                   </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="demo-cards mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-grid mdl-grid--no-spacing">
+            <div class="board-updates mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--12-col-desktop">
+              <div class="mdl-card__title mdl-card--expand mdl-color--white">
+                
+              </div>
+              <div class="mdl-card__supporting-text mdl-color-text--black mdl-typography--text-center">
+                Non dolore elit adipisicing ea reprehenderit consectetur culpa.
+              </div>
+              <div class="mdl-card__actions mdl-typography--text-center">
+                <div class="mdl-grid">
+                  <div class="mdl-cell mdl-cell--4-col mdl-grid--no-spacing borderRight">
+                    <span class="number mdl-color-text--red mdl-typography--display-1">3</span><br/>
+                    <span class="text mdl-typography--caption mdl-color-text--blue-grey-200">em<span class="mob-br"></span> atraso</span>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-grid--no-spacing borderRight">
+                    <span class="number mdl-color-text--orange mdl-typography--display-1">6</span><br/>
+                    <span class="text mdl-typography--caption mdl-color-text--blue-grey-200">em<span class="mob-br"></span> andamento</span>
+                  </div>
+                  <div class="mdl-cell mdl-cell--4-col mdl-grid--no-spacing">
+                    <span class="number mdl-color-text--green-A700 mdl-typography--display-1">14</span><br/>
+                    <span class="text mdl-typography--caption mdl-color-text--blue-grey-200">ítens<span class="mob-br"></span> concluídos</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="demo-separator mdl-cell--1-col"></div>
+           
+            <div class="mdl-card indicators mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-desktop">
+              <div class="mdl-card__title">Raio X financeiro</div>
+              <div class="mdl-card__supporting-text mdl-grid--no-spacing width100">
+                <div class="mdl-grid mdl-grid--no-spacing graph01">
+                    <div class="mdl-cell mdl-cell--7-col mdl-grid--no-spacing">
+                      <span class="number mdl-color-text--purple-A100 mdl-typography--display-1">R$ 600,00</span><br>
+                      <span class="text mdl-typography--caption mdl-color-text--blue-grey-200">Imposto do mês anterior</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-grid--no-spacing bg-graph"></div>
+                </div>
+
+                <div class="mdl-grid mdl-grid--no-spacing mdl-card--border graph02">
+                    <div class="mdl-cell mdl-cell--7-col mdl-grid--no-spacing">
+                      <span class="number mdl-color-text--teal-300 mdl-typography--display-1">6%</span><br>
+                      <span class="text mdl-typography--caption mdl-color-text--blue-grey-200"> Alíquota do mês</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--5-col mdl-grid--no-spacing bg-graph"></div>
+                </div>
+
+                <div class="mdl-grid mdl-grid--no-spacing mdl-card--border graph03">
+                    <div class="mdl-cell mdl-cell--12-col mdl-grid--no-spacing">
+                      <span class="number mdl-color-text--light-blue-A200 mdl-typography--display-1">R$ 167.632,00</span><br>
+                      <span class="text mdl-typography--caption mdl-color-text--blue-grey-200">Faturamento do ano de 2017</span>
+                    </div>
+                    <div class="mdl-cell mdl-cell--12-col mdl-grid--no-spacing bg-graph"></div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </main>
+    </div>
+     
+    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script> 
+    
+  </body>
+</html>
